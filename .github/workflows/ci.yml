@@ -22,6 +22,12 @@ jobs:
       - name: Scan for security vulnerabilities in Ruby dependencies
         run: bin/brakeman --no-pager
 
+      - name: Check RuboCop version
+        run: bundle exec rubocop --version
+
+      - name: Check RuboCop configuration
+        run: bundle exec rubocop --debug
+
   scan_js:
     runs-on: ubuntu-latest
 
@@ -42,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+      uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -55,9 +61,6 @@ jobs:
 
       - name: Lint code for consistent style
         run: bundle exec rubocop --color
-
-      - name: Lint code for consistent style
-        run: bin/rubocop -f github
 
   test:
     runs-on: ubuntu-latest
