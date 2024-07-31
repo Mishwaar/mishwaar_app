@@ -5,5 +5,4 @@ class Rider < ApplicationRecord
   has_many :payments, class_name: "Payments"
 
   validates :payment_method, presence: true
-
 end

@@ -5,5 +5,4 @@ class Driver < ApplicationRecord
   has_many :rides, class_name: "Rides"
 
   validates :license_number, presence: true
-  
 end
