@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  driver: one
+  rider: one
+  vehicle: one
+  start_location: MyString
+  end_location: MyString
+  start_time: 2024-07-31 19:56:56
+  end_time: 2024-07-31 19:56:56
+  cost: 9.99
+
+two:
+  driver: two
+  rider: two
+  vehicle: two
+  start_location: MyString
+  end_location: MyString
+  start_time: 2024-07-31 19:56:56
+  end_time: 2024-07-31 19:56:56
+  cost: 9.99
