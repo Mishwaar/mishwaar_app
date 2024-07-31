@@ -50,6 +50,12 @@ jobs:
           ruby-version: 3.3.3
           bundler-cache: true
 
+      - name: Install dependencies
+        run: bundle install --jobs 4
+
+      - name: Lint code for consistent style
+        run: bundle exec rubocop --color
+
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
